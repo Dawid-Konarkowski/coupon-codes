@@ -49,4 +49,4 @@ management:
 
 logging:
   level:
-    com.empik.coupons: INFO
+    com.coupons: INFO

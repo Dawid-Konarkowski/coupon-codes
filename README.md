@@ -5,8 +5,7 @@ z limitem liczby użyć, ograniczeniem geograficznym (po adresie IP) i opcjonaln
 użytkownik = jedno użycie". Zaprojektowany z myślą o poprawnym działaniu w **wielowątkowym
 środowisku produkcyjnym**.
 
-> Zadanie rekrutacyjne backend (Empik). Pełna treść zadania: [`zadanie_rekrutacyjne_7.pdf`](zadanie_rekrutacyjne_7.pdf),
-> a jej streszczenie znajduje się w sekcji [Wymagania zadania](#wymagania-zadania).
+> Zakres funkcjonalny i wymagania podsumowano w sekcji [Wymagania](#wymagania).
 
 ---
 
@@ -22,7 +21,7 @@ użytkownik = jedno użycie". Zaprojektowany z myślą o poprawnym działaniu w 
 - [Konfiguracja](#konfiguracja)
 - [Budowanie i uruchamianie lokalnie](#budowanie-i-uruchamianie-lokalnie)
 - [Testy](#testy)
-- [Wymagania zadania](#wymagania-zadania)
+- [Wymagania](#wymagania)
 
 ---
 
@@ -200,7 +199,7 @@ konsumpcja limitu**. Dzięki temu odrzucone żądanie nie pozostawia żadnego ef
 Warstwowy podział odpowiedzialności:
 
 ```
-com.empik.coupons
+com.coupons
 ├── web/                # warstwa HTTP: kontroler, DTO, obsługa błędów, ustalanie kraju z żądania
 │   ├── CouponController
 │   ├── ClientCountryResolver
@@ -316,9 +315,9 @@ Zakres testów (`10` testów):
 
 ---
 
-## Wymagania zadania
+## Wymagania
 
-Mapowanie wymagań z treści zadania na realizację:
+Mapowanie wymagań funkcjonalnych na realizację:
 
 | Wymaganie | Realizacja |
 | --- | --- |
@@ -338,7 +337,3 @@ Mapowanie wymagań z treści zadania na realizację:
 ## Licencja
 
 Projekt udostępniony na licencji [MIT](LICENSE).
-
----
-
-*#EmpikTeam*

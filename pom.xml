@@ -11,7 +11,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.empik</groupId>
+    <groupId>com.coupons</groupId>
     <artifactId>coupon-service</artifactId>
     <version>1.0.0</version>
     <name>coupon-service</name>

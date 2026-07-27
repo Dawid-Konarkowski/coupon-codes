@@ -27,6 +27,6 @@ public class OpenApiConfig {
                                 one-redemption-per-user rule. Designed to behave correctly under
                                 concurrency.""")
                         .contact(new Contact().name("Empik Recruitment Task"))
-                        .license(new License().name("Recruitment task")));
+                        .license(new License().name("MIT").url("https://opensource.org/licenses/MIT")));
     }
 }

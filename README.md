@@ -335,4 +335,10 @@ Mapowanie wymagań z treści zadania na realizację:
 
 ---
 
+## Licencja
+
+Projekt udostępniony na licencji [MIT](LICENSE).
+
+---
+
 *#EmpikTeam*

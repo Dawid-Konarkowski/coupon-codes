@@ -1,0 +1,9 @@
+target/
+.git/
+.gitignore
+.idea/
+*.iml
+*.md
+README.md
+zadanie_rekrutacyjne_7.pdf
+.mvn/wrapper/maven-wrapper.jar

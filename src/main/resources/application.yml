@@ -1,0 +1,52 @@
+spring:
+  application:
+    name: coupon-service
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/coupons}
+    username: ${SPRING_DATASOURCE_USERNAME:coupons}
+    password: ${SPRING_DATASOURCE_PASSWORD:coupons}
+  jpa:
+    hibernate:
+      # Flyway owns the schema; Hibernate only validates that entities match it.
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+
+server:
+  port: ${SERVER_PORT:8080}
+
+# Application-specific settings
+coupons:
+  geo:
+    base-url: ${COUPONS_GEO_BASE_URL:http://ip-api.com}
+    # Country used when the client IP is non-public (loopback/private) and cannot be geolocated.
+    default-country: ${COUPONS_GEO_DEFAULT_COUNTRY:}
+    # Allows the X-Country-Code header to override IP-based geolocation (handy for local testing).
+    allow-country-header: ${COUPONS_GEO_ALLOW_COUNTRY_HEADER:true}
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+    tags-sorter: alpha
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    com.empik.coupons: INFO

@@ -4,12 +4,13 @@ import com.coupons.domain.Coupon;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 import java.time.Instant;
+import java.util.UUID;
 
 @Schema(description = "A coupon and its current usage state.")
 public record CouponResponse(
 
-        @Schema(description = "Internal identifier.", example = "1")
-        Long id,
+        @Schema(description = "Internal identifier.", example = "3f1e9c7a-1b2c-4d5e-8f90-1234567890ab")
+        UUID id,
 
         @Schema(description = "Coupon code (normalized to upper case).", example = "WIOSNA")
         String code,

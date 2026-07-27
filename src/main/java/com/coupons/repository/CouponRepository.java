@@ -7,8 +7,9 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import java.util.Optional;
+import java.util.UUID;
 
-public interface CouponRepository extends JpaRepository<Coupon, Long> {
+public interface CouponRepository extends JpaRepository<Coupon, UUID> {
 
     Optional<Coupon> findByCode(String code);
 
@@ -30,5 +31,5 @@ public interface CouponRepository extends JpaRepository<Coupon, Long> {
              WHERE c.id = :id
                AND c.currentUses < c.maxUses
             """)
-    int tryConsume(@Param("id") Long id);
+    int tryConsume(@Param("id") UUID id);
 }

@@ -122,7 +122,7 @@ Bazowa ścieżka: `/api/v1/coupons`
 
 ```json
 {
-  "id": 1,
+  "id": "3f1e9c7a-1b2c-4d5e-8f90-1234567890ab",
   "code": "WIOSNA",
   "createdAt": "2026-07-27T20:53:20.340456053Z",
   "maxUses": 100,

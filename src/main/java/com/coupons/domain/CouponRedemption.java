@@ -13,6 +13,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.time.Instant;
+import java.util.UUID;
 
 /**
  * Records a single redemption of a coupon by a concrete user.
@@ -34,11 +35,11 @@ import java.time.Instant;
 public class CouponRedemption {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
 
     @Column(name = "coupon_id", nullable = false)
-    private Long couponId;
+    private UUID couponId;
 
     @Column(name = "user_id", nullable = false, length = 128)
     private String userId;
@@ -46,7 +47,7 @@ public class CouponRedemption {
     @Column(name = "redeemed_at", nullable = false)
     private Instant redeemedAt;
 
-    public CouponRedemption(Long couponId, String userId) {
+    public CouponRedemption(UUID couponId, String userId) {
         this.couponId = couponId;
         this.userId = userId;
         this.redeemedAt = Instant.now();

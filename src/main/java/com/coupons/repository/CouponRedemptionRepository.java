@@ -3,7 +3,9 @@ package com.coupons.repository;
 import com.coupons.domain.CouponRedemption;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface CouponRedemptionRepository extends JpaRepository<CouponRedemption, Long> {
+import java.util.UUID;
 
-    boolean existsByCouponIdAndUserId(Long couponId, String userId);
+public interface CouponRedemptionRepository extends JpaRepository<CouponRedemption, UUID> {
+
+    boolean existsByCouponIdAndUserId(UUID couponId, String userId);
 }
